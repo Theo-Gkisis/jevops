@@ -1,0 +1,10 @@
+class org.springframework.kafka.support.serializer.ErrorHandlingDeserializer\n","thread_name":"main","@timestamp":"2026-09-23T07:25:01.531+00:00","level":"INFO","file":"AbstractConfig.java","method":"logAll","logger_name":"org.apache.kafka.clients.consumer.ConsumerConfig"}
+ 
+"message":"Error parsing line 1","thread_name":"main","@timestamp":"2026-09-23T07:24:51.049+00:00","level":"ERROR","file":"BPRTEScenarioParser.java","method":"process","logger_name":"eu.echa.iuclid6.validation.rulesets.v10.scenarios.bprte.BPRTEScenarioParser"}
+ 
+class org.springframework.kafka.support.serializer.ErrorHandlingDeserializer\n","thread_name":"main","@timestamp":"2026-09-23T07:25:01.531+00:00","level":"INFO","file":"AbstractConfig.java","method":"logAll","logger_name":"org.apache.kafka.clients.consumer.ConsumerConfig"}
+ 
+"message":"Error parsing line 1","thread_name":"main","@timestamp":"2026-09-23T07:24:37.033+00:00","level":"ERROR","file":"BPRTEScenarioParser.java","method":"process","logger_name":"eu.echa.iuclid6.validation.rulesets.v10.scenarios.bprte.BPRTEScenarioParser"}
+ 
+"message":"Error parsing line 1","thread_name":"main","@timestamp":"2026-09-23T07:24:51.049+00:00","level":"ERROR","file":"BPRTEScenarioParser.java","method":"process","logger_name":"eu.echa.iuclid6.validation.rulesets.v10.scenarios.bprte.BPRTEScenarioParser"}
+ 

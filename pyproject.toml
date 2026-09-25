@@ -1,0 +1,7 @@
+[project]
+name = "jevops"
+version = "0.1.0"
+dependencies = [
+    "typer",
+    "rich",
+]

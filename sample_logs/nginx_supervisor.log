@@ -1,0 +1,23 @@
+2018-11-16 07:50:11,340 CRIT Supervisor is running as root.  Privileges were not dropped because no user is specified in the config file.  If you intend to run as root, you can set user=root in the config file to avoid this message.
+2018-11-16 07:50:11,343 INFO supervisord started with pid 1
+2018-11-16 07:50:12,346 INFO spawned: 'nginx' with pid 7
+2018-11-16 07:50:12,347 INFO spawned: 'php-fpm' with pid 8
+[16-Nov-2018 07:50:12] NOTICE: fpm is running, pid 8
+[16-Nov-2018 07:50:12] NOTICE: ready to handle connections
+2018-11-16 07:50:13,622 INFO success: nginx entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2018-11-16 07:50:13,629 INFO success: php-fpm entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+172.31.2.32 - - [16/Nov/2018:07:50:29 +0000] "GET / HTTP/1.1" 401 195 "-" "ELB-HealthChecker/2.0" "-" 0.000 - . -
+172.31.28.33 - - [16/Nov/2018:07:50:29 +0000] "GET / HTTP/1.1" 401 195 "-" "ELB-HealthChecker/2.0" "-" 0.000 - . -
+2018/11/16 07:52:23 [warn] 9#9: *9 an upstream response is buffered to a temporary file /var/tmp/nginx/fastcgi/1/00/0000000001 while reading upstream, client: 172.31.28.33, server: , request: "GET / HTTP/1.1", upstream: "fastcgi://127.0.0.1:9000", host: "orion.atmago.com"
+172.31.28.33 - new-atmago [16/Nov/2018:07:52:23 +0000] "GET / HTTP/1.1" 500 587703 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.102 Safari/537.36" "202.147.201.79" 0.773 0.688 . -
+2018/11/16 07:52:28 [crit] 9#9: *9 connect() to [::1]:9000 failed (99: Address not available) while connecting to upstream, client: 172.31.28.33, server: , request: "GET / HTTP/1.1", upstream: "fastcgi://[::1]:9000", host: "orion.atmago.com"
+2018/11/16 07:52:28 [warn] 9#9: *9 upstream server temporarily disabled while connecting to upstream, client: 172.31.28.33, server: , request: "GET / HTTP/1.1", upstream: "fastcgi://[::1]:9000"
+2018/11/16 07:52:28 [warn] 9#9: *9 an upstream response is buffered to a temporary file /var/tmp/nginx/fastcgi/2/00/0000000002 while reading upstream, client: 172.31.28.33, server: , request: "GET / HTTP/1.1", upstream: "fastcgi://127.0.0.1:9000", host: "orion.atmago.com"
+172.31.28.33 - new-atmago [16/Nov/2018:07:52:28 +0000] "GET / HTTP/1.1" 500 588110 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.102 Safari/537.36" "202.147.201.79" 0.181 0.000, 0.172 . -
+172.31.28.33 - new-atmago [16/Nov/2018:07:52:41 +0000] "GET /favicon.ico HTTP/1.1" 200 0 "https://orion.atmago.com/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.102 Safari/537.36" "202.147.201.79" 0.000 - . -
+2018-11-16 07:52:42,635 WARN received SIGTERM indicating exit request
+2018-11-16 07:52:42,635 INFO waiting for nginx, php-fpm to die
+[16-Nov-2018 07:52:42] NOTICE: Terminating ...
+[16-Nov-2018 07:52:42] NOTICE: exiting, bye-bye!
+2018-11-16 07:52:42,644 INFO stopped: php-fpm (exit status 0)
+2018-11-16 07:52:42,666 INFO stopped: nginx (exit status 0)
