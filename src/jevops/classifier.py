@@ -8,8 +8,8 @@ load_dotenv()
 OPENROUTER_URL = "https://openrouter.ai/api/alpha/decisions"
 
 
-def classify(line: str) -> tuple[str, float]:
-    """Ask JEV to classify a log line's severity."""
+def classify(line: str) -> tuple[str, float, float]:
+    """Ask JEV to classify a log line's severity. Returns (category, confidence, cost_usd)."""
     response = requests.post(
         OPENROUTER_URL,
         headers={"Authorization": f"Bearer {os.environ['OPENROUTER_API_KEY']}"},
@@ -30,5 +30,7 @@ def classify(line: str) -> tuple[str, float]:
             },
         },
     )
-    answer = response.json()["answers"]["severity"]
-    return answer["choice"], answer["confidence"]
+    data = response.json()
+    answer = data["answers"]["severity"]
+    cost = data["usage"]["cost"]
+    return answer["choice"], answer["confidence"], cost
